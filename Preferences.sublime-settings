@@ -1,0 +1,14 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_size": 13,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+    "rulers": [120],
+    "spell_check": true,
+    "auto_complete_commit_on_tab": false,
+    "show_line_endings": true,
+    "create_window_at_startup": false,
+}
