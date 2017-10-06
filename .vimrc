@@ -1,6 +1,5 @@
 " wishlist
 
-" basic variables
 
 " show current command
 set showcmd 
@@ -10,9 +9,6 @@ set nocompatible
 
 " use global replacement by default
 set gdefault  
-
-" ignore search case
-set ignorecase 
 
 " tab completion
 set wildmenu 
@@ -48,8 +44,25 @@ set noswapfile
 set expandtab
 set shiftwidth=4
 
+" let backspace work
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
 let $LANG='en'
 set langmenu=en
+
+" smart indention on newline
+filetype plugin indent on
+
+
+" Delete trailing white space on save, useful for some filetypes ;)
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
 
 " return to last edit position when opening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -60,6 +73,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim'
 " faster file browsing
 Plugin 'kien/ctrlp.vim'
 
