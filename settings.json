@@ -1,8 +1,13 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "vim.disableAnnoyingNeovimMessage": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "boundary",
     "files.trimTrailingWhitespace": true,
-    "python.linting.enabled": false
+    "python.linting.enabled": true,
+    "git.confirmSync": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 100,
+    "editor.formatOnType": true,
+    "editor.cursorBlinking": "phase",
+    "editor.formatOnPaste": true
 }
